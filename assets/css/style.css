@@ -1,0 +1,290 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    margin-bottom: 120px; /* 页脚的高度加上一些间距 */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    background: #e74c3c;
+    color: white;
+    border-radius: 4px;
+}
+
+.create-form, .import-form {
+    margin-bottom: 30px;
+    padding: 15px;
+    background: #ecf0f1;
+    border-radius: 4px;
+}
+
+.life-list {
+    list-style: none;
+    padding: 0;
+}
+
+.life-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #3498db;
+    color: white;
+    border-radius: 4px;
+}
+
+.life-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.life-view {
+    padding: 15px;
+}
+
+.traits ul, .memory ul {
+    list-style: none;
+    padding: 0;
+}
+
+.traits li, .memory li {
+    padding: 8px;
+    margin-bottom: 5px;
+    background: #f9f9f9;
+    border-left: 3px solid #3498db;
+}
+
+.memory li small {
+    display: block;
+    color: #7f8c8d;
+    font-size: 0.8em;
+}
+
+.evolution textarea {
+    width: 100%;
+    min-height: 100px;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 15px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.button.danger {
+    background: #e74c3c;
+}
+
+.actions {
+    margin-top: 20px;
+}
+
+.char-counter {
+    font-size: 0.8em;
+    color: #6c757d;
+    text-align: right;
+    margin-top: 0.25rem;
+    margin-bottom: 10px;
+}
+
+.evolution-prompt-box {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.evolution-prompt {
+    width: 100%;
+    min-height: 100px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.loading {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    border: 0.2em solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.075);
+    z-index: 1050;
+    display: none;
+    max-width: 350px;
+    background: #fff;
+    border-left: 4px solid #0d6efd;
+}
+
+.notification.error {
+    border-left-color: #dc3545;
+}
+
+.login-form {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.login-form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.user-info {
+    float: right;
+    margin-top: -40px;
+    color: #666;
+}
+
+.header {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.error-message {
+    background: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    border-left: 4px solid #c62828;
+}
+
+.auth-form button {
+    width: 100%;
+    padding: 12px;
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.auth-form button:hover {
+    background: #2980b9;
+}
+
+/* 生命体卡片hover效果 */
+.list-group-item-action:hover {
+    transform: translateY(-2px);
+    transition: transform 0.2s ease-in-out;
+}
+
+/* 特征标签样式 */
+.list-group-item {
+    transition: all 0.2s ease-in-out;
+}
+
+/* 生命事件时间线样式 */
+.memory-timeline .list-group-item {
+    position: relative;
+    border-left: 4px solid #0d6efd;
+    margin-left: 1rem;
+    padding-left: 1.5rem;
+}
+
+.memory-timeline .list-group-item::before {
+    content: '';
+    position: absolute;
+    left: -0.5rem;
+    top: 1.25rem;
+    width: 1rem;
+    height: 1rem;
+    background: #fff;
+    border: 2px solid #0d6efd;
+    border-radius: 50%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    .card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* 页脚固定样式 */
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
