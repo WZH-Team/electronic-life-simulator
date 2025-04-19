@@ -80,21 +80,14 @@ if (!isLoggedIn()) {
             </div>
         </div>
         
-        <footer class="footer mt-5 py-3 bg-light">
-            <div class="container text-center">
-                <p class="mb-1">© <script>document.write(new Date().getFullYear());</script> Electronic Life Simulator</p>
-                <p class="mb-0">
-                    <a href="https://github.com/WZH-Team/electronic-life-simulator" class="text-decoration-none" target="_blank">
-                        开源项目
-                    </a> | 
-                    <a href="https://opensource.org/licenses/MIT" class="text-decoration-none" target="_blank">
-                        MIT 许可证
-                    </a>
-                </p>
+        <footer class="footer mt-0">
+            <div class="container">
+                <a href="https://github.com/WZH-Team/electronic-life-simulator" target="_blank">开源项目</a>
             </div>
         </footer>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
     </html>
     <?php
@@ -178,7 +171,7 @@ $lives = $storage->getAllLives($currentUserId);
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" width="device-width, initial-scale=1.0">
     <title>Electronic Life Simulator</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -318,17 +311,9 @@ $lives = $storage->getAllLives($currentUserId);
         <?php endif; ?>
     </div>
     
-    <footer class="footer mt-5 py-3 bg-light">
-        <div class="container text-center">
-            <p class="mb-1">© <script>document.write(new Date().getFullYear());</script> Electronic Life Simulator</p>
-            <p class="mb-0">
-                <a href="https://github.com/WZH-Team/electronic-life-simulator" class="text-decoration-none" target="_blank">
-                    开源项目
-                </a> | 
-                <a href="https://opensource.org/licenses/MIT" class="text-decoration-none" target="_blank">
-                    MIT 许可证
-                </a>
-            </p>
+    <footer class="footer mt-0">
+        <div class="container">
+            <a href="https://github.com/WZH-Team/electronic-life-simulator" target="_blank">开源项目</a>
         </div>
     </footer>
 
