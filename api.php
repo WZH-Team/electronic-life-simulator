@@ -11,8 +11,8 @@ if (!isLoggedIn()) {
     exit;
 }
 
-$action = $_GET['action'] ?? '';
-$lifeId = $_GET['life_id'] ?? '';
+$action = htmlspecialchars($_GET['action'] ?? '');
+$lifeId = htmlspecialchars($_GET['life_id'] ?? '');
 $currentUserId = getCurrentUserId();
 
 if (empty($action) || empty($lifeId)) {
@@ -30,7 +30,7 @@ if (!$life) {
 
 switch ($action) {
     case 'evolve':
-        $prompt = file_get_contents('php://input');
+        $prompt = htmlspecialchars(file_get_contents('php://input'));
         $life->evolve($prompt);
         $storage->saveLife($life);
         echo json_encode($life->toArray());

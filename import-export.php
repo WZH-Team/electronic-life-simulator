@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($data) {
             $life = Life::fromArray($data);
             if ($storage->saveLife($life)) {
-                header("Location: index.php?action=view&id={$life->id}");
+                header("Location: index.php?action=view&id=" . urlencode($life->id));
                 exit;
             }
         }
@@ -25,10 +25,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 } elseif (isset($_GET['export'])) {
     // 导出处理
-    $life = $storage->getLife($_GET['export']);
+    $life = $storage->getLife(htmlspecialchars($_GET['export']));
     if ($life) {
         header('Content-Type: application/json');
-        header('Content-Disposition: attachment; filename="' . $life->getName() . '.json"');
+        header('Content-Disposition: attachment; filename="' . htmlspecialchars($life->getName()) . '.json"');
         echo $life->toJson();
         exit;
     }
