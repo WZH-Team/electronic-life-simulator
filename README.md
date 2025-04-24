@@ -1,5 +1,7 @@
 # Electronic Life Simulator (电子生命模拟器)
 
+中文 | [English](README_en.md)
+
 Electronic Life Simulator 是一个基于 Web 的数字生命模拟系统，通过 AI 驱动的进化机制，让用户能够创建和培养独特的数字生命体。每个生命体都有其独特的特征和发展轨迹，通过用户的引导和 AI 的响应来经历不同的人生阶段。
 
 🌐 在线体验：[https://wbot.ecylt.top/new/electronic-life-simulator/](https://wbot.ecylt.top/new/electronic-life-simulator/)
